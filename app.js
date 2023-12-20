@@ -6,7 +6,7 @@ const app = express();
 
 app.use(express.json());
 
-const databaseurl = "mongodb+srv://priyamane828:eAJ5lzdYElguV9kb@practice.nsdcsn8.mongodb.net/login"
+const databaseurl = "mongodb+srv://priyamane828:eAJ5lzdYElguV9kb@practice.nsdcsn8.mongodb.net/social"
 
 mongoose.connect(databaseurl);
 let database = mongoose.connection;
@@ -23,8 +23,8 @@ app.post('/sendData',(req,res)=> {
     res.send("Data received successfully!");
 })
 
-app.listen(5000,()=>{
-    console.log("Server is running on port 5000");
+app.listen(4000,()=>{
+    console.log("Server is running on port 4000");
 });
 });
 database.on('error',(err)=> {
